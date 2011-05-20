@@ -36,17 +36,24 @@ function fnord_block($op = 'list', $delta = 0, $edit = array()) {
     );
     return $form;
               }
-
+*/
   else if ($op == 'view') {
     switch ($delta) {
       case 0:
         // Your module will need to define this function to render the block.
         $block = array(
           'subject' => t('Fnord #1'), 
-          'content' => mymodule_display_block_1(),
+          'content' => 'It works.', /* mymodule_display_block_1(),*/
         );
-        break;
-      case 1:
+    
+    return $block;
+      break;
+    }
+
+  }
+   /*
+
+     case 1:
         // Your module will need to define this function to render the block.
         $block = array(
           'subject' => t('Title of block #2'), 
@@ -57,7 +64,7 @@ function fnord_block($op = 'list', $delta = 0, $edit = array()) {
   
   */
 
-    return $block;
+//    return $block; 
  
 }
 ?>
