@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Implementation of hook_block()
+ */
+
 
 function fnord_block($op = 'list', $delta = 0, $edit = array()) {
 
@@ -11,22 +15,22 @@ function fnord_block($op = 'list', $delta = 0, $edit = array()) {
       'region' => 'left',
     );
 
-/**
- * les lignes suivantes sont copiées/collées de api.drupal.org
- * (a comment->) BLOCK_CACHE_PER_ROLE will be assumed for block 0.
- *
- *     $blocks[1] = array(
- *           'info' => t('Mymodule block #2 describes ...'), 
- *                 'cache' => BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_PAGE,
- *                     );
- **/
-    return $blocks;
-  }
 
+  /* les lignes suivantes sont copiées/collées de api.drupal.org */
+  /* BLOCK_CACHE_PER_ROLE will be assumed for block 0. */
+  /**  $blocks[1] = array(
+   *   'info' => t('Mymodule block #2 describes ...'), 
+   *   'cache' => BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_PAGE,
+   * );
+   */
+    return $blocks;
+  
+  }
+/*
   else if ($op == 'configure' && $delta == 0) {
     $form['items'] = array(
       '#type' => 'select', 
-      '#title' => t('Number of items'), 
+      '#title' => t('Combien vous en voulez?'), 
       '#default_value' => variable_get('mymodule_block_items', 0), 
       '#options' => array('1', '2', '3'),
     );
@@ -50,8 +54,11 @@ function fnord_block($op = 'list', $delta = 0, $edit = array()) {
           );
           break;
     }
+  
+  */
+
     return $block;
-  }
+ 
 }
 ?>
 
