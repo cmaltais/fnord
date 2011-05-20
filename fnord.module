@@ -1,0 +1,14 @@
+<?php
+
+function fnord_block($op = 'list', $delta = 0, $edit = array()) {
+
+  if ($op == 'list') {
+    $blocks[0] = array(
+      'info' => t('Le texte info de .info dans .module'), 
+      'weight' => 0, 
+      'status' => 1, 
+      'region' => 'left',
+    );
+
+
+  }
