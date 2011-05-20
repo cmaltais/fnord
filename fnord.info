@@ -1,0 +1,6 @@
+; $Id
+name = Fnord
+description = Prorgamming ist nufd lijsdf
+package = other
+core = 6.x
+
